@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1022</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>МТС</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/index.png</normaloff>icons/index.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background-color:  rgb(255, 255, 255);
+}
+
+QPushBatton: hover{
+background-color: #888;
+}</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>40</width>
+    <height>40</height>
+   </size>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="1">
+       <widget class="QPushButton" name="pushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(254, 0, 0);
+color: white;
+font-size: 15pt;</string>
+        </property>
+        <property name="text">
+         <string>Загрузить</string>
+        </property>
+        <property name="autoRepeatInterval">
+         <number>100</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QComboBox" name="comboBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>601</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Example_1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Example_2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Example_3</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1022</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="Sort">
+    <property name="title">
+     <string>Сортировать</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="Fail">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <widget class="QMenu" name="Save_as">
+     <property name="title">
+      <string>Сохранить как...</string>
+     </property>
+     <addaction name="Save_as_exel"/>
+     <addaction name="Save_as_csv"/>
+     <addaction name="Save_as_txt"/>
+    </widget>
+    <addaction name="Save"/>
+    <addaction name="Save_as"/>
+   </widget>
+   <addaction name="Fail"/>
+   <addaction name="Sort"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="actionExel">
+   <property name="text">
+    <string>Exel</string>
+   </property>
+  </action>
+  <action name="Save">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="Save_as_exel">
+   <property name="text">
+    <string>Exel</string>
+   </property>
+  </action>
+  <action name="Save_as_csv">
+   <property name="text">
+    <string>csv</string>
+   </property>
+  </action>
+  <action name="Save_as_txt">
+   <property name="text">
+    <string>txt</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="file.qrc"/>
+ </resources>
+ <connections/>
+</ui>
